@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  tasks:
+    - name: creating docker image
+      command: docker build -t westuser/ansdocimg .
+    - name: push the img to dockerhub
+      command: docker push westuser/ansdocimg
+    - name: remove the docker image
+      command: docker image rmi westuser/ansdocimg
+      ignore_errors: yes
