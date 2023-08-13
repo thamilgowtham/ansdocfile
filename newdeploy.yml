@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mynewcon
-        image: westuser/ansdocimg:latest
+        image: westuser/nginximg:latest
         ports:
         - containerPort: 80
 ---
